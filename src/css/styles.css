@@ -16,3 +16,138 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* Task-1 - Gallery */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.gallery {
+  width: 1440px;
+  height: 696px;
+  padding: 24px 156px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-link {
+  flex-basis: calc((100% - 48px)/3);
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  cursor: url('../images/vector.png'), pointer;
+}
+
+div.sl-overlay {
+  background-color: #2E2F42CC;
+}
+
+.sl-wrapper button.sl-close {
+  color: #ffffff;
+}
+
+.sl-wrapper .sl-navigation button.sl-prev {
+  color: #ffffff;
+}
+
+.sl-wrapper .sl-navigation button.sl-next {
+  color: #ffffff;
+}
+
+.sl-wrapper div.sl-counter {
+  color: #ffffff;
+}
+
+
+/* Task-2 - Form */
+
+.feedback-form {
+  width: 408px;
+  height: auto;
+  top: -424px;
+  left: 2312px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  opacity: 0px;
+  top: 30px;
+  left: 30px;
+}
+
+input {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  opacity: 0px;
+  border: 1px solid #808080;
+  outline: none;
+  padding: 8px 16px;
+}
+
+input:hover {
+  border-color: #000000;
+  outline: none;
+}
+
+input:active {
+  border-color: #808080;
+  outline: none;
+}
+
+textarea {
+  width: 360px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #808080;
+  outline: none;
+  padding: 8px 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button {
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  opacity: 0px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+
+button:hover {
+  background-color: #6C8CFF;
+}
+
+
+
