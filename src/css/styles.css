@@ -149,5 +149,17 @@ button:hover {
   background-color: #6C8CFF;
 }
 
+.link-container {
+  margin-left: 100px;
+  margin-top: 100px;
+  color: blueviolet;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
 
-
+.link {
+  display: block;
+}
