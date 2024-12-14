@@ -7,7 +7,7 @@ const formData = {
 const LS_key = "feedback-form-state";
 
 const form = document.querySelector(".feedback-form");
-const input = form.querySelector('input[name="email"]');
+const input = document.querySelector('input[name="email"]');
 const textarea = form.querySelector('textarea[name="message"]');
 const button = form.querySelector("button");
 
@@ -16,6 +16,7 @@ form.addEventListener("submit", handleSubmit);
 form.addEventListener("input", inputDan);
 
 function inputDan(event) {
+
     const input = event.target.name;
 
     if (input === 'email' || input === 'message') {
