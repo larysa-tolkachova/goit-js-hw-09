@@ -15,29 +15,12 @@ form.addEventListener("submit", handleSubmit);
 form.addEventListener("input", inputDan);
 
 //отримуємо дані з LS і передаємо в поля
-function relevantDan() {
-    try {
-        if (localStorage.length === 0) {
-            return
-        }
     
-    const lsDan = JSON.parse(localStorage.getItem(LS_key));
+    const lsDan = JSON.parse(localStorage.getItem(LS_key)) || {};
         
-    input.value = lsDan.email;
-    textarea.value = lsDan.message;  
-        
-        for (const key in lsDan) {
-            
-            form.elements[key].value = lsDan[key];
-        }
-    
-    } catch (error) {
-        console.log(error);
-    } 
-    
-}
+    input.value = lsDan.email || "";
+    textarea.value = lsDan.message || "";  
 
-relevantDan();
 
 // беремо дані з поля і передаємо в LS
 function inputDan(event) {
@@ -56,12 +39,10 @@ function handleSubmit(event) {
     event.preventDefault();
     
     if (input.value === "" || textarea.value === "") {
-        alert("«Fill please all fields»");        
+        alert("«Fill please all fields»");
+    } else {
+        console.log({ email: input.value, message: textarea.value });
+        event.currentTarget.reset();
+        localStorage.removeItem(LS_key);
     }
-
-    console.log(`Email: ${input.value}\nMessage: ${textarea.value}`); 
-    event.currentTarget.reset();
-    localStorage.removeItem(LS_key);
 }
-
-
